@@ -1,4 +1,5 @@
 const guessuh =document.getElementById("guesser");
+const liveText =document.getElementById("lives");
 let guess;
 let word = "NATHAN";
 function clickButton(){
@@ -24,7 +25,7 @@ function updateScreen(L){
 }
 
 function start(){
-    
+ liveText.innerHTML = "hellopkgigugu";
 }
 
 
