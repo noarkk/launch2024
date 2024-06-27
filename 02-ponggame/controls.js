@@ -2,8 +2,19 @@ const UPARROW = 38;
 const DOWNARROW = 40;
 const WKEY = 87;
 const SKEY = 83;
+let colors = ["red","blue","pink","green","orange","purple","brown","black"];
+let color = 1;
 
 let paddleVelocity = 5;
+let dif = 10;
+function easyDif(){
+    dif=5;
+    console.log("easy");
+}
+function hardDif(){
+    dif=25;
+    console.log("impossible");
+}
 
 function keyDown(event) {
     const key = event.keyCode;

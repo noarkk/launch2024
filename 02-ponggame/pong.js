@@ -10,6 +10,7 @@ let paddleWidth = 25;
 let paddleLength = 100;
 let ballRadius = 12.5;
 
+let rand;
 let ball;
 let paddleL;
 let paddleR;
@@ -36,7 +37,19 @@ function resetPaddles() {
 }
 
 function resetBall() {
-    ball = new Ball(boardWidth/2, boardHeight/2, -5, -5, ballRadius, "brown");
+    let sigma = Math.random();
+    let alpha = Math.random();
+    let xvelo=5;
+    rand = Math.random();
+    rand *= 5;
+    if (sigma >= .5) {
+        rand = -rand;
+    }
+    if (alpha>= .5){
+        xvelo=-xvelo;
+    }
+    console.log(rand);
+    ball = new Ball(boardWidth/2, boardHeight/2, -xvelo, rand, ballRadius, colors[color]);
    
     
 }

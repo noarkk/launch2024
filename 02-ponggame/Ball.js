@@ -29,6 +29,7 @@ class Ball {
         // TOP WALL
         if (this.y - this.r < 0) {
             this.vy = Math.abs(this.vy);
+            
         }
 
         // BOTTOM WALL
@@ -38,6 +39,9 @@ class Ball {
     }
 
     bouncePaddleL(paddle) {
+        color = Math.random(colors);
+        color = color*10;
+        color = Math.floor(color);
         if (this.x - this.r > paddle.w + paddle.x) return false;
         if (this.x - this.r < 0) return true; // stop Game Betta
         if (this.y < paddle.y) return false;
@@ -49,12 +53,16 @@ class Ball {
     }
 
     bouncePaddleR(paddle) {
+        color = Math.random(colors);
+        color = color*10;
+        color = Math.floor(color);
         if (this.x + this.r < paddle.x) return false;
         if (this.x + this.r > paddle.x + paddle.w) return true; // stop Game Betta
         if (this.y < paddle.y) return false;
         if (this.y > paddle.y + paddle.l) return false; 
         if (this.vx > 0) {
             this.vx = -paddleForce * Math.abs(this.vx);
+           
         }
         return false;
     }

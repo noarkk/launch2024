@@ -24,9 +24,10 @@ class Paddle {
 
         this.y = newY;
     }
-
+    
     moveCPU(ball, x, y, vx, vy) {
       let point= y-(x*(vy/vx))
+      point-=dif;
         paddleL.y=point
 
         
